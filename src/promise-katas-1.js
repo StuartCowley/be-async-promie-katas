@@ -104,7 +104,9 @@ const theNumberOfTheBeast = () => {
 // internalServerError() rejects to { error: 500 }
 
 const internalServerError = () => {
-  return new Promise((_, reject) => {});
+  return new Promise((_, reject) => {
+    reject({ error: 500 });
+  });
 };
 
 // 9 Create a function that returns a promise which resolves to "happy" if the parameter is greater than
@@ -113,7 +115,15 @@ const internalServerError = () => {
 // happySad(1) resolves to "happy"
 // happySad(0) rejects to "sad"
 
-const happySad = () => {};
+const happySad = (value) => {
+  return new Promise((resolve, reject) => {
+    if (value >= 1) {
+      resolve("happy");
+    } else {
+      reject("sad");
+    }
+  });
+};
 
 // 10 Create a function that returns a promise which resolves to "Yes. Luke, I am your father." if the
 // parameter is "Luke" and rejects to "Not your dad." if the value is anything else
@@ -121,13 +131,25 @@ const happySad = () => {};
 // amIYourFather() resolves to "Yes. Luke, I am your father."
 // amIYourFather() rejects to "Not your dad."
 
-const amIYourFather = () => {};
+const amIYourFather = (value) => {
+  return new Promise((resolve, reject) => {
+    if (value === "Luke") {
+      resolve("Yes. Luke, I am your father.");
+    } else {
+      reject("Not your dad.");
+    }
+  });
+};
 
 // 11 Create a function that returns a promise. The promise should resolve to a new function that returns "My name is <input name>"
 // Example:
 // A call to myNameIs() resolves to a new function that takes one argument, name, and returns "My name is name" Eg (name) => `My name is ${name}`
 
-const myNameIs = () => {};
+const myNameIs = () => {
+  return new Promise((resolve, _) => {
+    resolve((name) => `My name is ${name}`);
+  });
+};
 
 module.exports = {
   returnPromise,
