@@ -33,15 +33,11 @@ Remember, a Promise can only resolve successfully, or reject when it fails to re
 // when we call returnPromise like 'returnPromise()' we expect our function to use the
 // 'resolve' Promise callback function in order to resolve successfully
 
-<<<<<<< HEAD
-const returnPromise = () => { };
-=======
 const returnPromise = () => { 
   return new Promise((resolve) => {
     resolve();
   });
 };
->>>>>>> 99d1edf (promise katas for code review)
 
 // 2 Create a function that returns a promise which returns 10 if it resolves succesfully
 // Example:
