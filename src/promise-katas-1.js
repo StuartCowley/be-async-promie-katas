@@ -35,7 +35,7 @@ Remember, a Promise can only resolve successfully, or reject when it fails to re
 
 const returnPromise = () => {
   return new Promise((resolve) => {
-  resolve();
+    resolve();
   });
 };
 
@@ -47,15 +47,15 @@ const returnTen = () => {
   return new Promise((resolve) => {
     resolve(10);
   });
- };
+};
 
 // 3 Create a function that returns a promise which returns 'string' if it resolves succesfully
 // Example:
 // returnString() resolves to the value 'string'
 
-const returnString = () => { 
+const returnString = () => {
   return new Promise((resolve) => {
-    resolve('string');
+    resolve("string");
   });
 };
 
@@ -65,7 +65,7 @@ const returnString = () => {
 
 const returnBob = () => {
   return new Promise((resolve) => {
-    resolve({name: 'Bob'});
+    resolve({ name: "Bob" });
   });
 };
 
@@ -73,9 +73,9 @@ const returnBob = () => {
 // Example:
 // returnList() resolves to the value ['eggs', 'apples', 'milk', 'bread']
 
-const returnList = () => { 
+const returnList = () => {
   return new Promise((resolve) => {
-    resolve(['eggs', 'apples', 'milk', 'bread'])
+    resolve(["eggs", "apples", "milk", "bread"]);
   });
 };
 
@@ -83,7 +83,7 @@ const returnList = () => {
 // Example:
 // anError() rejects to "An error occurred"
 
-const anError = () => { 
+const anError = () => {
   return new Promise((_, reject) => {
     reject("An error occurred");
   });
@@ -93,10 +93,10 @@ const anError = () => {
 // Example:
 // theNumberOfTheBeast() rejects to the value 666
 
-const theNumberOfTheBeast = () => { 
+const theNumberOfTheBeast = () => {
   return new Promise((_, reject) => {
     reject(666);
-  })
+  });
 };
 
 // 8 Create a function that returns a promise which returns an object with a key of error and value of 500 if it rejects
@@ -105,9 +105,9 @@ const theNumberOfTheBeast = () => {
 
 const internalServerError = () => {
   return new Promise((_, reject) => {
-    reject({ error: 500 })
-  })
- };
+    reject({ error: 500 });
+  });
+};
 
 // 9 Create a function that returns a promise which resolves to "happy" if the parameter is greater than
 // or equal to 1 and rejects to "sad" if the value is less than 1
@@ -117,13 +117,13 @@ const internalServerError = () => {
 
 const happySad = (x) => {
   return new Promise((resolve, reject) => {
-  if (x >= 1) {
-    resolve ('happy');
-  } else {
-    reject('sad')
-  };
+    if (x >= 1) {
+      resolve("happy");
+    } else {
+      reject("sad");
+    }
   });
- };
+};
 
 // 10 Create a function that returns a promise which resolves to "Yes. Luke, I am your father." if the
 // parameter is "Luke" and rejects to "Not your dad." if the value is anything else
@@ -131,14 +131,13 @@ const happySad = (x) => {
 // amIYourFather() resolves to "Yes. Luke, I am your father."
 // amIYourFather() rejects to "Not your dad."
 
-const amIYourFather = (x) => { 
+const amIYourFather = (x) => {
   return new Promise((resolve, reject) => {
-    if (x === 'Luke') {
-      resolve ('Yes. Luke, I am your father.');
+    if (x === "Luke") {
+      resolve("Yes. Luke, I am your father.");
+    } else {
+      reject("Not your dad.");
     }
-    else {
-      reject ('Not your dad.')
-    };
   });
 };
 
@@ -147,10 +146,10 @@ const amIYourFather = (x) => {
 // A call to myNameIs() resolves to a new function that takes one argument, name, and returns "My name is name" Eg (name) => `My name is ${name}`
 
 const myNameIs = () => {
- return new Promise((resolve) => {
-    resolve (function myFunc(name) {
-      return `My name is ${name}`
-    })
+  return new Promise((resolve) => {
+    resolve(function myFunc(name) {
+      return `My name is ${name}`;
+    });
   });
 };
 

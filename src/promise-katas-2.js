@@ -27,35 +27,32 @@ fetch("joke", "question").then(<insert your callback function>)
 
 const food = () => {
   return fetch("food")
-  .then((res) => {
-    return res.data
-  })
-  .then((data) => {
-    return data
-  })
-}
-
+    .then((res) => {
+      return res.data;
+    })
+    .then((data) => {
+      return data;
+    });
+};
 
 // 2 Create a function that uses the fetch function to make a request to the "cats" URL and returns
 // a list of cats in alphabetical order - expected return value ["Bandit", "Berry", "Puss in boots", "Smokey"] of type Array
 
 const cat = () => {
-  return fetch("cats")
-  .then((res) => {
-   return res.data.cats.sort()
-  })
-}
+  return fetch("cats").then((res) => {
+    return res.data.cats.sort();
+  });
+};
 
 // 3 Create a function that uses the fetch function to make a request to the "dogs" URL and returns
 // the naughtiest dog - expected return value {name: "Mutley", naughty: 10} of type Object
 
 const dog = () => {
-  return fetch("dogs")
-  .then((res) => {
-   return res.data.dogs.reduce((acc, obj) => {
+  return fetch("dogs").then((res) => {
+    return res.data.dogs.reduce((acc, obj) => {
       return obj.naughty > acc.naughty ? obj : acc;
     });
-  })
+  });
 };
 
 // 4 Create a function that uses the fetch function to make requests to the "jokes" URL and returns
@@ -69,14 +66,16 @@ const dog = () => {
 //
 
 const joke = () => {
-  return Promise.all([fetch("jokes", "question"), fetch("jokes" , "answer")])
-  .then((res) => {
-   return {
-    question: res[0].joke,
-    answer: res[1].answer
-   }
-  })
-  }
+  return Promise.all([
+    fetch("jokes", "question"),
+    fetch("jokes", "answer"),
+  ]).then((res) => {
+    return {
+      question: res[0].joke,
+      answer: res[1].answer,
+    };
+  });
+};
 
 module.exports = {
   food,
