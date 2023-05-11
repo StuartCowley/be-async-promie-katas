@@ -25,4 +25,4 @@ you need from the data that is returned.
 
 You can read the test files to understand what is being tested and how to pass them. 
 
-If you do not understand an exercise, or get stuck, ask a mentor for help. 
+If you do not understand an exercise, or get stuck, ask a mentor for help. OK
