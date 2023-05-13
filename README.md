@@ -1,28 +1,18 @@
 # Promise Katas
-This material accompanies the **Working with asynchronous Javascript** lecture.
 
-## How to set up
+This repository contains a set of functions I wrote with Express to practise fetching data from a server and returning promises.
 
-Clone and run `npm install`
+The starter files and end-to-end tests were cloned from: https://github.com/CommandShiftHQ/be-async-promise-katas
 
-To run the tests run `npm t` or `npm test`
+## Getting started
 
-## Instructions
+- Create a fork of this repo.
+- Clone your copy of the repo using the command: git clone git@github.com:_your-github-username_/javascript-basics-express
 
-Do not change the test files. 
+## Install the dependencies
 
-Do not change the code in fakeApi.js.
+Run `npm install`. 
 
-Do not change the name of the functions as these are imported into the test files. 
+## Run the tests
 
-Read the instructions in the comments above each function in both promise-katas-1.js and promise-katas-2.js.
-
-Edit the function body in both promise-katas-1.js and promise-katas-2.js to pass all of the tests.
-
-You can read the fakeApi to understand what data will get returned to you. The fakeApi is set up as if it was a real API. 
-You should always check what data is returned to you and the level of nesting in order for you to access the information 
-you need from the data that is returned. 
-
-You can read the test files to understand what is being tested and how to pass them. 
-
-If you do not understand an exercise, or get stuck, ask a mentor for help. 
+Run `npm test`.
